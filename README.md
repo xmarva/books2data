@@ -2,6 +2,14 @@
 
 Tools for extracting text from various file formats
 
+## WIP
+
+- [ ] Encodings processing
+- [ ] .epub
+- [ ] .doc, docx
+- [ ] .pdf
+
+
 ## Installation
 
 1.  Clone the repository:

@@ -65,7 +65,7 @@ class BookProcessor:
             processed_data = None
 
             if file_path.suffix == ".fb2":
-                from book2data.file_processors.fb2_processor import FB2FileProcessor
+                from books2data.file_processors.fb2_processor import FB2FileProcessor
                 fb2_processor = FB2FileProcessor()
                 processed_data = self._process_file(file_path, fb2_processor.process, subdir_name)
             elif file_path.suffix == ".txt":
@@ -116,11 +116,13 @@ class BookProcessor:
         json_output_path = Path(json_output_path)
         
         try:
+            logger.debug(f"Data to save: {all_data}") # added log
             with open(json_output_path, "w", encoding="utf-8") as f:
-               json.dump(all_data, f, indent=4, ensure_ascii=False)
+                json.dump(all_data, f, indent=4, ensure_ascii=False)
             logger.info(f"Data saved to: {json_output_path}")
         except Exception as e:
             logger.error(f"Error saving to json: {e}")
+            logger.error(f"Data to save: {all_data}")
             
     def get_processed_files(self) -> List[str]:
             return self.processed_files

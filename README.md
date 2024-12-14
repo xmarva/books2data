@@ -1,6 +1,6 @@
-# medusa
+# books2data
 
-This is repo with my tools for extracting text from various file formats, handling encodings, and creating structured datasets.
+Tools for extracting text from various file formats, handling encodings, and creating structured datasets
 
 ## Supported Formats
 
@@ -18,5 +18,5 @@ This is repo with my tools for extracting text from various file formats, handli
 
 2.  Run the script from the command line:
     ```bash
-    python medusa/dataset_generator.py /path/to/your/input
+    python books2data/dataset_generator.py /path/to/your/input
     ```

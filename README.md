@@ -18,5 +18,5 @@ This is repo with my tools for extracting text from various file formats, handli
 
 2.  Run the script from the command line:
     ```bash
-    python text_processing_lib/dataset_generator.py /path/to/your/input --output_dir /path/to/your/output
+    python medusa/dataset_generator.py /path/to/your/input
     ```
